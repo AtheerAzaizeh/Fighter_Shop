@@ -4,7 +4,6 @@
 }
 
 #wrapper{
-  padding-left: 32px;
   padding-top: 32px;
 }
 
@@ -13,6 +12,7 @@ header{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-left: 32px;
 }
 
 #logo{
@@ -22,6 +22,7 @@ header{
   height: 64px;
   background-image: url("../images/BoxingLogo.jpg");
   background-size: 64px 64px;
+  background-repeat: no-repeat;
   text-decoration: none;
 }
 
@@ -75,4 +76,167 @@ nav a:hover{
 
 .active{
   font-weight: 700;
+}
+
+#greeting-div{
+  background-image: url("../images/GreetingBackground.jpg");
+  width: 100%;
+  height: 797px;
+  background-size: 100% 797px;
+  background-repeat: no-repeat;
+  padding-top: 32px;
+}
+
+#greeting-div h1{
+  font-family: Nunito;
+  font-size: 96px;
+  font-weight: 800;
+  color: #612999;
+}
+
+#greeting-div p{
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+
+#greeting-text{
+  padding-left: 32px;
+}
+
+#about-div , #popularItems-div{
+  padding-left: 32px;
+  padding-top: 32px;
+}
+
+#about-div h1{
+  padding-bottom:32px;
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 40px;
+  color: #612999;
+}
+
+#about-div p{
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  text-align: justify;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 32px;
+  padding-top: 16px;
+}
+
+.Carditem{
+  width: 376px;
+  height: 496px;
+  border-radius: 38px;
+  background-color: #EFECFF;
+}
+
+#cardimg{
+  display: grid;
+  background-image: url("../images/gloves.jpg");
+  width: 376px;
+  height: 276px;
+  background-size: 376px 276px;
+  background-repeat: no-repeat;
+  border-radius: 38px;
+  color: #FFFFFF;
+  
+}
+
+.ellipse-heart{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  width: 47px;
+  height: 47px;
+  background: white;
+  border-radius: 50%;
+  bottom: 50%;
+  right: 8%;
+}
+
+.love-icon{
+  background-image: url("../images/icons/love.png");
+  width: 23px;
+  height: 20px;
+  background-size: 23px 20px;
+  background-repeat: no-repeat;
+}
+
+.card-container h3 , .card-container p , .price{
+  padding-left: 32px;
+}
+
+.card-container h3{
+  font-family: Abel;
+  font-weight: 400;
+  font-size: 30px;
+  color: black;
+  position: relative;
+  bottom: 32px;
+}
+
+.card-container p{
+  font-family: Abel;
+  font-weight: 400;
+  font-size: 18px;
+  color:#333333;
+  bottom: 16px;
+  position: relative;
+}
+
+.footer-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.price{
+  font-family: Abel;
+  font-weight: 400;
+  font-size: 35px;
+  color: #612999;
+  position: relative;
+  bottom: 13px;
+}
+
+.ellipse-basket{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  width: 63px;
+  height: 63px;
+  background: #612999;
+  border-radius: 50%;
+}
+
+.basket-icon{
+  width: 31px;
+  height: 31px;
+  background-size: 31px 31px;
+  background-color: #FFFFFF;
+  background: url("../images/icons/shopping-basket.png") no-repeat center / contain;
+  filter: brightness(0) invert(1);
+}
+
+.addcard-icon{
+  position: relative;
+  bottom: 15px;
+  right: 32px;
 }
