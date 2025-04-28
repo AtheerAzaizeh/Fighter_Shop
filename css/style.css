@@ -139,6 +139,12 @@ nav a:hover{
   height: 496px;
   border-radius: 38px;
   background-color: #EFECFF;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Carditem:hover{
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 #cardimg{
@@ -173,6 +179,14 @@ nav a:hover{
   height: 20px;
   background-size: 23px 20px;
   background-repeat: no-repeat;
+  
+}
+
+.ellipse-heart:hover{
+  cursor: pointer;
+  .love-icon{
+    background-image: url("../images/icons/love-red.png");
+  }
 }
 
 .card-container h3 , .card-container p , .price{
@@ -239,4 +253,76 @@ nav a:hover{
   position: relative;
   bottom: 15px;
   right: 32px;
+}
+
+.addcard-icon:hover{
+  cursor: pointer;
+  .basket-icon{
+    filter: brightness(1) invert(0);
+  }
+}
+
+
+
+footer {
+  background-color: #EFECFF;
+  padding: 32px;
+  height: 287px;
+}
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-col{
+  padding-right: 214px;
+}
+
+.footer-col h3 {
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li + li {
+  margin-top: 8px;
+}
+
+.footer-col ul li a {
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-copy {
+  margin-top: 24px;
+  text-align: start;
+}
+.footer-copy p {
+  font-family: Nunito, sans-serif;
+  font-size: 14px;
+  color: #3e3f43;
 }
