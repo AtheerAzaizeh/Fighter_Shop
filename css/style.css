@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper{
+  padding-left: 32px;
+  padding-top: 32px;
+}
+
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo{
+  display: flex;
+  flex-wrap: wrap;
+  width: 64px;
+  height: 64px;
+  background-image: url("../images/BoxingLogo.jpg");
+  background-size: 64px 64px;
+  text-decoration: none;
+}
+
+#logo:hover {
+  background-size: 72px 72px;
+  width: 72px;
+  height: 72px;
+  span{
+    font-size:32px;
+  }
+}
+
+#logo span{
+  font-family: Nunito;
+  font-size: 24px;
+  color: #3e3f43;
+  font-weight: 700;
+  letter-spacing: 6px;
+  padding-left: 61px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+nav ul{
+  list-style: none;
+  display:flex;
+  flex-wrap: wrap;
+  padding-right: 122px;
+}
+
+nav ul li {
+  padding: 0px 64px 0px 0px ;
+}
+
+nav a{
+  font-weight: 400;
+  text-decoration: none;
+  font-family: Nunito;
+  font-size: 30px;
+  color: #612999;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+nav a:hover{
+  color: rgb(116, 100, 112);
+  font-size: 38px;
+  background-color: #f0defd;
+  border-radius: 15px;
+}
+
+.active{
+  font-weight: 700;
+}
