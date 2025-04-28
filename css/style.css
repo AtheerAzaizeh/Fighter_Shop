@@ -1,28 +1,36 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-#wrapper{
+/* Wrapper */
+#wrapper {
   padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-wrap: wrap;
 }
 
-header{
+main {
+  flex: 1;
+}
+
+/* Header */
+header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-left: 32px;
+  padding: 0 32px;
 }
 
-#logo{
+#logo {
   display: flex;
-  flex-wrap: wrap;
   width: 64px;
   height: 64px;
-  background-image: url("../images/BoxingLogo.jpg");
-  background-size: 64px 64px;
-  background-repeat: no-repeat;
+  background: url("../images/BoxingLogo.jpg") no-repeat center/64px 64px;
   text-decoration: none;
 }
 
@@ -30,103 +38,106 @@ header{
   background-size: 72px 72px;
   width: 72px;
   height: 72px;
-  span{
-    font-size:32px;
-  }
 }
 
-#logo span{
-  font-family: Nunito;
+#logo:hover span {
+  font-size: 32px;
+}
+
+#logo span {
+  font-family: Nunito, sans-serif;
   font-size: 24px;
-  color: #3e3f43;
   font-weight: 700;
   letter-spacing: 6px;
-  padding-left: 61px;
-  padding-top: 20px;
+  color: #3e3f43;
+  margin-left: 16px;
   display: inline-block;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
-nav ul{
+/* Nav */
+nav ul {
   list-style: none;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   padding-right: 122px;
 }
 
 nav ul li {
-  padding: 0px 64px 0px 0px ;
+  margin-right: 64px;
 }
 
-nav a{
-  font-weight: 400;
-  text-decoration: none;
-  font-family: Nunito;
+nav a {
+  font-family: Nunito, sans-serif;
   font-size: 30px;
+  font-weight: 400;
   color: #612999;
+  text-decoration: none;
   cursor: pointer;
-  transition: 0.3s ease-in;
+  transition: color 0.3s ease-in, font-size 0.3s ease-in, background-color 0.3s ease-in;
 }
 
-nav a:hover{
-  color: rgb(116, 100, 112);
+nav a:hover {
+  color: rgb(116,100,112);
   font-size: 38px;
   background-color: #f0defd;
   border-radius: 15px;
 }
 
-.active{
+nav a.active {
   font-weight: 700;
 }
 
-#greeting-div{
-  background-image: url("../images/GreetingBackground.jpg");
-  width: 100%;
+/* Greeting */
+#greeting-div {
+  background: url("../images/GreetingBackground.jpg") no-repeat center/cover;
   height: 797px;
-  background-size: 100% 797px;
-  background-repeat: no-repeat;
   padding-top: 32px;
 }
 
-#greeting-div h1{
-  font-family: Nunito;
+#greeting-text {
+  padding-left: 32px;
+}
+
+#greeting-div h1 {
+  font-family: Nunito, sans-serif;
   font-size: 96px;
   font-weight: 800;
   color: #612999;
 }
 
-#greeting-div p{
-  font-family: Nunito;
+#greeting-div p {
+  font-family: Nunito, sans-serif;
   font-size: 24px;
   font-weight: 600;
-  color: black;
+  color: #000;
 }
 
-#greeting-text{
-  padding-left: 32px;
+/* About */
+#about-div, #popularItems-div {
+  padding: 32px;
 }
 
-#about-div , #popularItems-div{
-  padding-left: 32px;
-  padding-top: 32px;
-}
-
-#about-div h1{
-  padding-bottom:32px;
-  font-family: Rubik;
-  font-weight: 500;
+#about-div h2 , #popularItems-div h2 {
+  font-family: Rubik, sans-serif;
   font-size: 40px;
+  font-weight: 500;
   color: #612999;
+  margin-bottom: 16px;
 }
 
-#about-div p{
-  font-family: Rubik;
-  font-weight: 400;
+#about-div p {
+  font-family: Rubik, sans-serif;
   font-size: 20px;
-  color: black;
+  font-weight: 400;
+  color: #000;
   text-align: justify;
+  margin-bottom: 16px;
 }
 
-.card-container{
+/* Cards */
+.card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -134,156 +145,139 @@ nav a:hover{
   padding-top: 16px;
 }
 
-.Carditem{
+.Carditem {
   width: 376px;
   height: 496px;
   border-radius: 38px;
   background-color: #EFECFF;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s ease-in-out;
 }
 
-.Carditem:hover{
-  cursor: pointer;
+.Carditem:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
-#cardimg{
-  display: grid;
-  background-image: url("../images/gloves.jpg");
-  width: 376px;
-  height: 276px;
-  background-size: 376px 276px;
-  background-repeat: no-repeat;
-  border-radius: 38px;
-  color: #FFFFFF;
-  
-}
-
-.ellipse-heart{
+/* Image wrapper */
+.cardimg {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: end;
+  width: 100%;
+  height: 276px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  overflow: hidden;
+}
+
+/* Heart icon */
+.ellipse-heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   width: 47px;
   height: 47px;
-  background: white;
+  background-color: #fff;
   border-radius: 50%;
-  bottom: 50%;
-  right: 8%;
-}
-
-.love-icon{
-  background-image: url("../images/icons/love.png");
-  width: 23px;
-  height: 20px;
-  background-size: 23px 20px;
-  background-repeat: no-repeat;
-  
-}
-
-.ellipse-heart:hover{
-  cursor: pointer;
-  .love-icon{
-    background-image: url("../images/icons/love-red.png");
-  }
-}
-
-.card-container h3 , .card-container p , .price{
-  padding-left: 32px;
-}
-
-.card-container h3{
-  font-family: Abel;
-  font-weight: 400;
-  font-size: 30px;
-  color: black;
-  position: relative;
-  bottom: 32px;
-}
-
-.card-container p{
-  font-family: Abel;
-  font-weight: 400;
-  font-size: 18px;
-  color:#333333;
-  bottom: 16px;
-  position: relative;
-}
-
-.footer-card{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 32px;
-}
-
-.price{
-  font-family: Abel;
-  font-weight: 400;
-  font-size: 35px;
-  color: #612999;
-  position: relative;
-  bottom: 13px;
-}
-
-.ellipse-basket{
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: end;
+}
+
+.love-icon {
+  width: 23px;
+  height: 20px;
+  background: url("../images/icons/love.png") no-repeat center/contain;
+  transition: background-image 0.2s ease-in-out;
+}
+
+.ellipse-heart:hover .love-icon {
+  background-image: url("../images/icons/love-red.png");
+}
+
+/* Card content */
+.Carditem h3 {
+  font-family: Abel, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000;
+  margin: 16px;
+}
+
+.Carditem p {
+  font-family: Abel, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin: 0 16px 24px;
+  flex-grow: 1;
+}
+
+/* Footer-card */
+.footer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px;
+}
+
+.price {
+  font-family: Abel, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #612999;
+}
+
+/* Basket icon */
+.ellipse-basket {
   width: 63px;
   height: 63px;
-  background: #612999;
+  background-color: #612999;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.basket-icon{
+.basket-icon {
   width: 31px;
   height: 31px;
-  background-size: 31px 31px;
-  background-color: #FFFFFF;
-  background: url("../images/icons/shopping-basket.png") no-repeat center / contain;
+  background: url("../images/icons/shopping-basket.png") no-repeat center/contain;
   filter: brightness(0) invert(1);
+  transition: filter 0.2s ease-in-out;
 }
 
-.addcard-icon{
-  position: relative;
-  bottom: 15px;
-  right: 32px;
+.ellipse-basket:hover .basket-icon {
+  filter: brightness(1) invert(0);
 }
 
-.addcard-icon:hover{
-  cursor: pointer;
-  .basket-icon{
-    filter: brightness(1) invert(0);
-  }
-}
-
-
-
+/* Footer */
 footer {
   background-color: #EFECFF;
   padding: 32px;
-  height: 287px;
-}
-.footer-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  margin-top: auto;
 }
 
-.footer-col{
-  padding-right: 214px;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
 }
 
 .footer-col h3 {
   font-family: Nunito, sans-serif;
-  font-weight: 700;
   font-size: 18px;
-  color: #333333;
+  font-weight: 700;
+  color: #333;
   margin-bottom: 12px;
 }
 
@@ -299,7 +293,7 @@ footer {
   font-family: Nunito, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 
@@ -312,6 +306,7 @@ footer {
   display: flex;
   gap: 16px;
 }
+
 .footer-social a img {
   width: 24px;
   height: 24px;
@@ -319,8 +314,8 @@ footer {
 
 .footer-copy {
   margin-top: 24px;
-  text-align: start;
 }
+
 .footer-copy p {
   font-family: Nunito, sans-serif;
   font-size: 14px;
